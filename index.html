@@ -26,10 +26,15 @@
         <input type="submit" id="checkOutBtn" class="btn btn-primary mt-2" value="Check out a book">
         <input type="text" id="isbnReturn" class="form-control mt-2" placeholder="Enter the book ISBN (10 or 13 digits) you want to return">
         <input type="submit" id="returnBtn" class="btn btn-primary mt-2" value="Return a book">
-        <!-- <input type="submit" id="saveBtn" class="btn btn-primary mt-2" value="Save to the booklist"> -->
         </form>
       </div> 
-      
+
+      <p style="font-size: 30pt;"></p>
+      <p>Please enter the password to do Edit and Delete.</p>
+      <p>Password:<input id="passwordBox" type="password"/></p>
+      <button id="passwordBtn">Submit Password</button>
+      <!-- <input type="submit" id="passwordBtn" class="btn btn-primary mt-2" value="Submit Password"> -->
+
       <h3>===== Booklist Summary =====</h3>
       <ol id="bookList" class="list-group">
           <!-- book items will be refreshed here -->
