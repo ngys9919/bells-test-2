@@ -25,7 +25,7 @@ Module 3: **Agile Front End Development with JavaScript**
 : style.css
 
 * IMG Folder (images)
-
+: \<empty\>
 
 * RES Folder (resources)
 : bells.ico

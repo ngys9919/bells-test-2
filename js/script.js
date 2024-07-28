@@ -15,23 +15,42 @@ document.addEventListener("DOMContentLoaded", async function(){
   addBtnClicked.addEventListener("click", function(event) {
       event.preventDefault();
 
-      const isbnInput = document.querySelector("#isbn")
-      const isbn = isbnInput.value;
+      const isbn_addNewInput = document.querySelector("#isbn")
+      isbn = isbn_addNewInput.value;
 
       const titleInput = document.querySelector("#title");
-      const title = titleInput.value;
+      title = titleInput.value;
 
       const authorInput = document.querySelector("#author");
-      const author = authorInput.value;
+      author = authorInput.value;
 
-      addBook(books, title, author, isbn);
+      addNewBook();
+      saveBooks(books);
       renderList(books);
     });
 
-  const saveBtnClicked = document.querySelector("#saveBtn");
-  saveBtnClicked.addEventListener("click", function(event){
+  const checkOutBtnClicked = document.querySelector("#checkOutBtn");
+  checkOutBtnClicked.addEventListener("click", function(event){
+        event.preventDefault();
+
+        const isbn_checkOutInput = document.querySelector("#isbnCheckOut")
+        isbn = isbn_checkOutInput.value;
+
+        checkOutBookInterface();
+        saveBooks(books);
+        renderList(books);
+    });
+
+  const returnBtnClicked = document.querySelector("#returnBtn");
+  returnBtnClicked.addEventListener("click", function(event){
       event.preventDefault();
+
+      const isbn_returnInput = document.querySelector("#isbnReturn")
+      isbn = isbn_returnInput.value;
+
+      returnBookInterface();
       saveBooks(books);
+      renderList(books);
   });
 
   // let addBtn = document.querySelector("#addBtn");

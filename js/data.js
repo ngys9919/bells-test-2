@@ -44,13 +44,6 @@ function addBook(books, title, author, isbn) {
       isCheckedOut: false
     };
 
-    // isbn cannot be empty and title cannot be empty and author cannot be empty
-    if (isbn == "" || title == "" || author =="") {
-        alert("Please provide complete information!"); 
-        // terminate the function
-        return; 
-    }
-
     books.push(newBook);
 }
 
@@ -66,6 +59,7 @@ function returnBook(books, isbn) {
 
   if ((book) && (book.isCheckedOut==false)) {
       console.log("Book is not checked out.");
+      alert("Book is not checked out.");
       return false;
    } else {
       if (book) {
@@ -73,6 +67,7 @@ function returnBook(books, isbn) {
         return true;
       } else {   
         console.log("Book is not found.");
+        alert("Book is not found.");
         return false;
       }
    }
@@ -89,6 +84,7 @@ function checkOutBook(books, isbn) {
   //update isCheckedOut status to true
   if ((indexToUpdate>=0) && (books[indexToUpdate].isCheckedOut)) {
      console.log("Book is already checked out");
+     alert("Book is already checked out");
      return false;
    } else {
      if (indexToUpdate>=0) {
@@ -96,6 +92,7 @@ function checkOutBook(books, isbn) {
        return true;
      } else {
        console.log("Book is not found");
+       alert("Book is not found");
        return false;
      }
    }
@@ -104,6 +101,7 @@ function checkOutBook(books, isbn) {
 //isbnInputCheck(userSelection): 
 //input validation to ensure that ISBNs are unique and in the correct format.
 function isbnInputCheck(userSelection) {
+  if (false) {
     if (userSelection === "2") {
       isbn = prompt("Enter the ISBN (10 or 13 digits) for the new book: ");
     } else if (userSelection === "3") {
@@ -112,16 +110,19 @@ function isbnInputCheck(userSelection) {
       isbn = prompt("Enter the book ISBN (10 or 13 digits) you want to return: ");
     } else {
       console.log("Invalid userSelection!");
+      alert("Invalid userSelection!");
       return(-1);
     }
-  
+  }
     let isbn_length = isbn.length;
   
     if (isbn.length===0) {
       console.log("Invalid ISBN! You entered nothing.");
+      alert("Invalid ISBN! You entered nothing.");
       return(-1);
     } else if ((isbn_length !== 10) && (isbn_length !== 13)) {
       console.log("ISBN is either 10 or 13 digits!");
+      alert("ISBN is either 10 or 13 digits!");
       return(-1);
     }
   
@@ -130,6 +131,7 @@ function isbnInputCheck(userSelection) {
     
     if (!isbn_isDigits) {
       console.log("ISBN must be digits!");
+      alert("ISBN must be digits!");
       return(-1);
     }
   
@@ -141,12 +143,15 @@ function isbnInputCheck(userSelection) {
         isbn_unique = false;
         if (userSelection === "2") {
           console.log("ISBN already exists!");
+          alert("ISBN already exists!");
           return(-1);
         } else if ((userSelection === "3") && (foundRecord.isCheckedOut)) {
           console.log("Book is already checked out!");
+          alert("Book is already checked out!");
           return(-1);
         } else if ((userSelection === "4") && (!foundRecord.isCheckedOut)) {
           console.log("Book is not yet checked out!");
+          alert("Book is not yet checked out!");
           return(-1);
         }
       }
@@ -154,6 +159,7 @@ function isbnInputCheck(userSelection) {
     isbn_unique = true;
     if (userSelection === "2") {
       console.log("ISBN is unique!");
+      alert("ISBN is unique!");
     }
     return isbn;
   }
@@ -165,13 +171,23 @@ function isbnInputCheck(userSelection) {
       isbn = isbnInputCheck("2");
       if (isbn === -1) {
         console.log("Failed to add new book.");
+        alert("Failed to add new book.");
         return;
       }
     
-      let title = prompt("Enter the title for the new book: ");
-      let author = prompt("Enter the author for the new book: ");
+      // isbn cannot be empty and title cannot be empty and author cannot be empty
+      if (isbn == "" || title == "" || author =="") {
+        console.log("Please provide complete information!");
+        alert("Please provide complete information!"); 
+        // terminate the function
+        return; 
+      }
+      
+      // let title = prompt("Enter the title for the new book: ");
+      // let author = prompt("Enter the author for the new book: ");
       addBook(books, title, author, isbn);
       console.log("Book added successfully.");
+      alert("Book added successfully.");
   }
   
 //returnBookInterface():
@@ -180,15 +196,18 @@ function returnBookInterface() {
     isbn = isbnInputCheck("4");
     if (isbn === -1) {
       console.log("Failed to return book.");
+      alert("Failed to return book.");
       return;
     }
   
     let ret = returnBook(books, isbn);
     if ((books.length === 0) && (ret == false)) {
       console.log("There is no such book in the records.");
+      alert("There is no such book in the records.");
       return;
     } else if (ret == true) {
       console.log("Book returned successfully!");
+      alert("Book returned successfully!");
     }
 }
 
@@ -198,16 +217,19 @@ function checkOutBookInterface() {
     isbn = isbnInputCheck("3");
     if (isbn === -1) {
       console.log("Failed to check-out book.");
+      alert("Failed to check-out book.");
       return;
     }
   
     let ret = checkOutBook(books, isbn);
     if ((books.length === 0) && (ret == false)) {
       console.log("There is no such book in the library.");
+      alert("There is no such book in the library.");
       return;
     }
     if (ret == true) {
       console.log("Book checked out successfully!");
+      alert("Book checked out successfully!");
     }   
 }
 
