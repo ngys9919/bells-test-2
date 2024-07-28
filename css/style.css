@@ -5,8 +5,12 @@ html {
 
 #logo {
     /* specify picture size */
-    width: auto;
-    height: 30px;
+    /* bellstech logo */
+    /* width: auto; */
+    /* height: 30px; */
+    /* bells logo */
+    width: 50px;
+    height: 50px;
     /* centered picture */
     display: block;
     margin: 0 auto;
