@@ -2,3 +2,20 @@ html {
     height: 100%;
     width: 100%;
 }
+
+#logo {
+    /* specify picture size */
+    width: auto;
+    height: 30px;
+    /* centered picture */
+    display: block;
+    margin: 0 auto;
+    /* provide perimeter gaps */
+    padding: 2px 2px;
+}
+  
+.spacer {
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+  
