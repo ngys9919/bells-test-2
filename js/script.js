@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", async function(){
        if(passwordText == "Ernest300") {
         return true;
        }
+       console.log("Access denied! Incorrect password!");
        alert("Access denied! Incorrect password!");
        return false;
   }

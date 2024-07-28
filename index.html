@@ -18,27 +18,29 @@
       <h1 class="text-center">Library Management System</h1>      
       <div class="mb-3">
         <form id="books-form">
-        <input type="text" id="isbn" class="form-control mt-2" placeholder="Enter the ISBN (10 or 13 digits) for the new book">
-        <input type="text" id="title" class="form-control mt-2" placeholder="Enter the title for the new book">
-        <input type="text" id="author" class="form-control mt-2" placeholder="Enter the author for the new book">
+        <input type="text" id="isbn" class="form-control form-control-sm mt-1" placeholder="Enter ISBN (10 or 13 digits) for the new book">
+        <input type="text" id="title" class="form-control form-control-sm mt-1" placeholder="Enter the title for the new book">
+        <input type="text" id="author" class="form-control form-control-sm mt-1" placeholder="Enter the author for the new book">
         <input type="submit" id="addBtn" class="btn btn-primary mt-2" value="Add a new book">
-        <input type="text" id="isbnCheckOut" class="form-control mt-2" placeholder="Enter the book ISBN (10 or 13 digits) you want to borrow">
+        <input type="text" id="isbnCheckOut" class="form-control form-control-sm mt-1" placeholder="Enter book ISBN (10 or 13 digits) to borrow">
         <input type="submit" id="checkOutBtn" class="btn btn-primary mt-2" value="Check out a book">
-        <input type="text" id="isbnReturn" class="form-control mt-2" placeholder="Enter the book ISBN (10 or 13 digits) you want to return">
+        <input type="text" id="isbnReturn" class="form-control form-control-sm mt-1" placeholder="Enter book ISBN (10 or 13 digits) to return">
         <input type="submit" id="returnBtn" class="btn btn-primary mt-2" value="Return a book">
         </form>
       </div> 
 
-      <p style="font-size: 30pt;"></p>
+      <p style="font-size: 20pt;"></p>
       <p>Please enter the password to do Edit and Delete.</p>
       <p>Password:<input id="passwordBox" type="password"/></p>
       <button id="passwordBtn">Submit Password</button>
       <!-- <input type="submit" id="passwordBtn" class="btn btn-primary mt-2" value="Submit Password"> -->
 
-      <h3>===== Booklist Summary =====</h3>
-      <ol id="bookList" class="list-group">
+      <h3>=== Booklist Summary ===</h3>
+      <div style="margin: 20px;">
+        <ol id="bookList" class="list-group">
           <!-- book items will be refreshed here -->
-      </ol>
+        </ol>
+      </div>
     </div>
 
     <!-- insert offline axios js file -->
