@@ -5,7 +5,7 @@
 <!-- It should be READ ME first!!! -->
 
 <!-- Heading level 1 -->
-# BELLS-TEST
+# BELLS-TEST-2
 **(SCTP) Full Stack Developer**
 
 Module 3: **Agile Front End Development with JavaScript**
@@ -25,21 +25,16 @@ Module 3: **Agile Front End Development with JavaScript**
 : style.css
 
 * IMG Folder (images)
-: \<empty\>
+: bells_logo.jpg
+: bellstech_logo.png
 
 * RES Folder (resources)
 : bells.ico
-
-* MEDIA Folder (multimedia)
-: \<empty\>
 
 * JS Folder (javascript)
 : axios.js
 : script.js
 : data.js
-
-* UNUSE Folder (unused, obsolete)
-: \<empty\>
 
 <!-- Heading level 1 -->
 # Project Guide
@@ -53,17 +48,17 @@ For the purpose of the portfolio project, a landing page is created for the foll
 
 This project is about a simple *Library Management System (LMS)* at **BELLSTECH** using the concepts we learned in the Todo List application lab. Instead of managing tasks, we'll be managing books in a library.
 
-C = Create: adding new data to the database
-R = Read: get existing information
-U = Update: update existing information in the database
+C = Create: adding new data to the database   
+R = Read: get existing information   
+U = Update: update existing information in the database   
 D = Delete: remove existing information from the database
 
 books[] -> represent our database model
 - array: represents the entire database
 - object: represents one record
 
-The application of this project caters to the needs of a specific target user group, the mid-career switchers,
-who are looking for information on SCTP Courses at BELLSTECH, a tech business unit of [Bells Institute of Higher Learning][1].
+The application of this project caters to the needs of a specific target user group, the librarian and the book lovers,
+who are looking for a web-based system to track the books and its loan status.
 
 The website provides an one-stop entry point to the library books available and its borrowed status, namely:
 
